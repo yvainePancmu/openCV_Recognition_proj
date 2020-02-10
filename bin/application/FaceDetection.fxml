@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.CheckBox?>
+	
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.FaceDetectionController">
+ 	<top>
+	 	<VBox alignment="CENTER">
+	 		<padding>
+				<Insets top="25" right="25" bottom="25" left="25" />
+			</padding>
+			<ImageView fx:id="welcomeImage" />
+		</VBox>
+	</top>
+	<center>
+		<VBox alignment="CENTER">
+			<padding>
+				<Insets right="10" left="10" top="25" bottom="25" />
+			</padding>
+			<ImageView fx:id="originalFrame" />
+		</VBox>
+	</center>
+	<bottom>
+		<HBox alignment="CENTER" spacing="30">
+			<padding>
+				<Insets top="25" right="25" bottom="25" left="25" />
+			</padding>
+			<Button fx:id="cameraButton" alignment="center" text="Start camera" onAction="#startCamera" disable="true" />
+			<Button fx:id="reportButton" alignment="center" text="Show Report" onAction="#giveReport" disable="false" />
+			<Button fx:id="pictureButton" alignment="center" text="Check In" onAction="#takePicture" disable="true" />
+		</HBox>
+	</bottom>
+</BorderPane>
